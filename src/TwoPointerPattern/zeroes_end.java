@@ -1,4 +1,4 @@
-package array.q;
+package TwoPointerPattern;
 
 public class zeroes_end {
     public static void main(String[] args )

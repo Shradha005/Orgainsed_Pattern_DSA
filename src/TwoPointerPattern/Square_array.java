@@ -1,4 +1,4 @@
-package array.q;
+package TwoPointerPattern;
 import java.util.Arrays;
 
 // Problem is  : given a sorted array we need to square and sort again

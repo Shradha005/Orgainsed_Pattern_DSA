@@ -1,4 +1,4 @@
-package array.q;
+package TwoPointerPattern;
 
 public class unsorted_element {
     public static void main( String[] args)

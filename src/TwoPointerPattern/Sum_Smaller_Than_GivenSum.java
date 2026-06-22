@@ -1,4 +1,4 @@
-package array.q;
+package TwoPointerPattern;
 
 import java.util.ArrayList;
 import java.util.List;

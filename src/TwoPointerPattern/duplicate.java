@@ -1,6 +1,4 @@
-package array.q;
-
-import java.util.Arrays;
+package TwoPointerPattern;
 
 public class duplicate {
     public static void main(String[] args) {

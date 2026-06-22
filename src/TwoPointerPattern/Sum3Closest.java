@@ -1,4 +1,4 @@
-package array.q;
+package TwoPointerPattern;
 
 import java.util.*;
 
@@ -6,7 +6,7 @@ public class Sum3Closest
 {
     static void main(String[] args)
     {
-        int[] arr = {-1, 2, 1, -4} ;
+        int[] arr = {-1,2,1,-4} ;
         int target = 1;
         int ans = diff(arr,target) ;
         System.out.print(ans);
