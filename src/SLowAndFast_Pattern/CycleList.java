@@ -4,21 +4,15 @@ public class CycleList
 {
     public static void main(String[] args)
     {
-        Node fourth = new Node(70);
-        Node third = new Node(100,fourth);
-        Node second = new Node(20,third);
-        Node first = new Node(20,second);
-        Node head= new Node(80,first);
-
-        fourth.next = second ;
-        Node temp = head ;
-        for(int i = 0 ; i<10; i++) {
-            System.out.print(temp.data + " ->");
-            temp = temp.next;
-        }
-        System.out.print("END");
-
-
+       CycleList List = new CycleList();
+       List.insertAtfirst(10) ;
+       List.insertAtlast(20);
+        List.insertAtlast(30);
+        List.insertAtlast(40);
+        List.insertAtlast(50);
+        List.MakeACycle(3);
+        List.display();
+        System.out.print( List.checkcycle());
 
     }
   public Node head ;
@@ -29,7 +23,8 @@ public class CycleList
        int data;
        Node next;
 
-       Node(int data) {
+       Node(int data)
+       {
            this.data = data;
        }
 
@@ -38,15 +33,68 @@ public class CycleList
            this.next = next;
        }
    }
+   public void insertAtfirst(int data )
+   {
+       Node newnode = new Node(data);
+       newnode.next = head ;
+       head = newnode ;
+       if(tail == null)
+       {
+           tail= head ;
+       }
+       size++;
+   }
+   public void insertAtlast(int data )
+   {
+       if(head== null) {
+           insertAtfirst(data);
+           return ;
+       }
+       Node newnode = new Node(data) ;
+       tail.next = newnode ;
+       tail = newnode ;
+       size++;
+   }
+
    public void display()
    {
        Node temp = head ;
-       while(temp!=null)
+       for(int i =0; i<10; i++)
        {
            System.out.print(temp.data + " ->") ;
            temp = temp.next;
        }
-       System.out.print("END") ;
+       System.out.print("...") ;
+
+   }
+   public void MakeACycle(int position)
+   {
+       if(head == null)
+       {
+           return ;
+       }
+       Node target = head;
+       for (int i= 0 ; i< position ; i++)
+       {
+           target= target.next ;
+       }
+       tail.next = target ;
+   }
+   public boolean checkcycle()
+   {
+       Node slow = head ;
+       Node fast = head ;
+       while(fast!=null && fast.next!=null)
+       {
+           slow= slow.next ;
+           fast = fast.next .next ;
+           if(slow== fast )
+           {
+               return true ;
+           }
+       }
+       return false ;
 
    }
 }
+
