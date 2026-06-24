@@ -11,9 +11,7 @@ public class ReturnStartingOfCycle
         Listnode.insertAtlast(50);
         Listnode.insertAtlast(90);
         Listnode.Cycle(2);
-//        Listnode.display() ;
         Node start = Listnode.CheckCycle();
-
         if(start != null)
         {
             System.out.println("Here is the starting point of the cycle  : " + start.data);
@@ -22,7 +20,6 @@ public class ReturnStartingOfCycle
         {
             System.out.println("No cycle");
         }
-//        Listnode.display() ;
     }
     public Node head ;
     public Node tail ;
