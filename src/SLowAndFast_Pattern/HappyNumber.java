@@ -14,8 +14,8 @@ public class HappyNumber {
         {
             if (fast == 1) break;
             slow = increase(slow) ;
-            fast = increase(fast) ;
-            fast = increase(fast) ;
+            fast = increase(increase(fast)) ;
+
             if(slow == fast && slow != 1)
             {
                 return false ;
