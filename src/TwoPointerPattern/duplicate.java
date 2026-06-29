@@ -15,14 +15,12 @@ public class duplicate {
 //        here j is fixed for 0th place
         int j = 0;
         int n= arr.length ;
-        int left = 0;
            for (int i = 1; i <arr.length; i++) {
                if (arr[j] != arr[i]) {
                    j++;
                    arr[j] = arr[i];
-                   left++;
-               } else
-                   left++;
+
+               }
            }
 //because at the final time j = 4 and here j=4 = 20 but we have 5 unique element so we return
 //        j+1 ;
