@@ -4,11 +4,11 @@ import java.util.* ;
 public class RemoveAllADjacent {
     public static void main(String[] args)
     {
-        String str = "abbacz" ;
-        Removeadjacent(str);
+        String str = "abbbabaaa" ;
+        System.out.print(Removeadjacent(str));
 
     }
-    public static void Removeadjacent(String str )
+    public static String Removeadjacent(String str )
     {
         int n = str.length();
         Stack<Character> ch  = new Stack<>() ;
@@ -26,11 +26,11 @@ public class RemoveAllADjacent {
         StringBuilder reversed = new StringBuilder() ;
         while(!ch.empty())
         {
-                reversed.append(ch.peek()).reverse() ;
+                reversed.append(ch.peek()) ;
                 ch.pop() ;
         }
 
 
-        System.out.print(reversed) ;
+        return reversed.reverse().toString();
     }
 }
