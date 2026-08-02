@@ -13,6 +13,7 @@ public class CountTriplets {
 
     }
 
+
     public static List<List<Integer>> CountInteger(int[] a, int sum) {
         int left = 0;
         int n = a.length;
