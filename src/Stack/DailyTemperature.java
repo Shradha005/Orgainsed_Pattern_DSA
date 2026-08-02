@@ -15,6 +15,7 @@ public class DailyTemperature {
         int[] ans = new int[n];
         for(int i =n-1 ; i>=0 ;i--)
         {
+//            why we check value of the peek element  here (a[st.peek())
             while(!st.empty() && a[st.peek()] <=a[i])
             {
                 st.pop();
@@ -28,6 +29,7 @@ public class DailyTemperature {
                 ans[i] = st.peek()-i;
 
             }
+//            because in stack we push indices where in other we store direct values
             st.push(i);
         }
         return ans ;
